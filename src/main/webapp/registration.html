@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Movie Booking Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    .center {
+        text-align: center;
+        margin: auto;
+    }
+    #a1 {
+        margin-top: 20px;
+        font-size: 1.2em;
+        color: #555;
+    }
+    h2 {
+        color: #444;
+    }
+    form {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        display: inline-block;
+    }
+    label {
+        margin-right: 10px;
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="tel"],
+    select {
+        margin-bottom: 10px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #5c67f2;
+        color: white;
+        cursor: pointer;
+    }
+    input[type="reset"] {
+        background-color: #f44336;
+    }
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+        opacity: 0.9;
+    }
+    a {
+        display: inline-block;
+        margin-top: 20px;
+        color: #5c67f2;
+        text-decoration: none;
+    }
+
+</style>
+</head>
+<body align="center">
+
+ 
+<div class="center">
+    <div id="a1">movie1     movie2      movie3</div>
+</div>
+<h2 class="center">Movie Booking Form</h2>
+
+<form action="register" method="post" class="center">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="mobile">Mobile:</label>
+    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required><br><br>
+    
+    <label for="movie">Select Movie(s):</label>
+    <select id="movie" name="movie[]" required>
+        <option value="movie1">Movie 1</option>
+        <option value="movie2">Movie 2</option>
+        <option value="movie3">Movie 3</option>
+    </select><br><br>
+    
+    <label for="time">Select Time(s):</label>
+    <select id="time" name="time[]" required>
+        <option value="9AM">9:00 AM - 12:00 PM</option>
+        <option value="12PM">12:00 PM - 3:00 PM</option>
+        <option value="3PM">3:00 PM - 6:00 PM</option>
+        <option value="6PM">6:00 PM - 9:00 PM</option>
+    </select><br><br>
+    
+    <input type="submit" value="Register">
+    <input type="reset" value="Cancel">
+    
+</form>
+<br>
+<a href='movielist'>Registration List</a>
+</body>
+</html>
